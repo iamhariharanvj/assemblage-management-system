@@ -23,12 +23,6 @@ const sideBarData = [
     name: "Explore",
     link: "/event/explore",
   },
-
-  {
-    icon: IoTicket,
-    name: "My Tickets",
-    link: "/tickets",
-  },
 ];
 
 const Sidebar = () => {
