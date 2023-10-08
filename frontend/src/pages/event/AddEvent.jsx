@@ -14,7 +14,7 @@ import axios from "axios";
 import Select from "react-select";
 import SelectLabel from "../../components/common/SelectLabel";
 const AddEvent = () => {
-  const id = useSelector((state) => state.auth.user._id);
+  const id = useSelector((state) => state.auth.user._id) || "";
 
   const [eventData, setEventData] = useState({
     organizer_id: id.toString(),
