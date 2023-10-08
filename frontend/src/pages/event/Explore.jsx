@@ -31,7 +31,7 @@ const Explore = () => {
   useEffect(() => {
     if (active == "all" || active == "") {
       axios
-        .get(`http://localhost:4000/events/`)
+        .get(`https://event-flow.onrender.com/events/`)
         .then((response) => {
           console.log(response.data);
           setEvents(response.data);
@@ -42,7 +42,7 @@ const Explore = () => {
         });
     } else {
       axios
-        .get(`http://localhost:4000/events/topic/${active}`)
+        .get(`https://event-flow.onrender.com/events/topic/${active}`)
         .then((response) => {
           console.log(response.data);
           setEvents(response.data);

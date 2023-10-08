@@ -21,7 +21,7 @@ const EditEvent = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/events/${params.id}`)
+      .get(`https://event-flow.onrender.com/events/${params.id}`)
       .then((response) => {
         setEventData(response.data);
       })
@@ -117,7 +117,7 @@ const EditEvent = () => {
 
   const postData = async () => {
     axios
-      .patch(`http://localhost:4000/events/${params.id}`, eventData)
+      .patch(`https://event-flow.onrender.com/events/${params.id}`, eventData)
       .then(function (response) {
         navigate("/dashboard");
       })

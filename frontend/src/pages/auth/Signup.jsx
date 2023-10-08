@@ -62,7 +62,7 @@ const Signup = () => {
     };
 
     axios
-      .post("http://localhost:4000/user/register", user)
+      .post("https://event-flow.onrender.com/user/register", user)
       .then((response) => {
         console.log(response);
         dispatch(login(response.data));

@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/events/organizer/${user._id}`)
+      .get(`https://event-flow.onrender.com/events/organizer/${user._id}`)
       .then((response) => {
         setEvents(response.data);
       })
@@ -96,18 +96,14 @@ const EventCard = ({ event }) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className={`flex flex-col p-5 w-72 h-72  rounded-lg bg-${colorTheme}-500`}
-    >
+    <div className={`flex flex-col p-5 w-72 h-72  rounded-lg bg-red-500`}>
       <p
-        className={`font-semibold text-${colorTheme}-500 px-2 py-1 my-1 bg-white   rounded text-sm `}
+        className={`font-semibold text-red-500 px-2 py-1 my-1 bg-white   rounded text-sm `}
       >
         {event.topic.toUpperCase()}
       </p>
 
-      <p className={`font-bold text-white p-2 text-${colorTheme}-500`}>
-        {event.title}
-      </p>
+      <p className={`font-bold text-white p-2 text-red-500`}>{event.title}</p>
 
       <p className="text-md flex-1 text-gray-200 p-2">
         {truncate(event.description)}

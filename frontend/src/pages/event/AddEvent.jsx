@@ -117,7 +117,7 @@ const AddEvent = () => {
 
   const postData = async () => {
     axios
-      .post("http://localhost:4000/events", [eventData])
+      .post("https://event-flow.onrender.com/events", [eventData])
       .then(function (response) {
         navigate("/dashboard");
       })
